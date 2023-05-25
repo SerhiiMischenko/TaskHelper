@@ -5,6 +5,7 @@ USE NoteHelper;
 CREATE TABLE note (
   id BIGINT PRIMARY KEY,
   title VARCHAR(255),
+  content VARCHAR(255),
   create_date TIMESTAMP,
   status VARCHAR(50)
 );

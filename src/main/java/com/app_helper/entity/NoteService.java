@@ -14,7 +14,7 @@ public class NoteService {
     private NoteRepository noteRepository;
 
     public List<Note> getNoteList() {
-        return noteRepository.findAll(Sort.by("id"));
+        return noteRepository.findAll();
     }
 
     public Note getNoteById(Long id) {

@@ -20,7 +20,10 @@ public class NoteController {
 
     @GetMapping("/list")
     public String getAllNotes(Model model) {
-        model.addAttribute("list",noteService.getNoteRepository());
+        try {
+            model.addAttribute("list",noteService.getNoteList());
+        }catch (NullPointerException e) {
+        }
         return "list";
     }
     @GetMapping("/create")
