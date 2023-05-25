@@ -1,4 +1,4 @@
-package com.app_helper.TaskHelper;
+package com.app_helper;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
