@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <style>
+        /* CSS стили для надписи */
+        .page-title {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 24px;
+        }
+
+        /* CSS стили для таблицы */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+        }
+
+        .title, .content, .date, .status {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .custom-button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<div class="page-title">
+    <h1>Note Helper</h1>
+</div>
+
+<form action="/note/create" method="GET">
+    <button class="custom-button" type="submit">Отправить</button>
+</form>
+
+<div class="grid-container">
+    <div class="title">Title</div>
+    <div class="content">Content</div>
+    <div class="date">Date</div>
+    <div class="status">Status</div>
+
+    <!-- Используем Thymeleaf для отображения данных -->
+    <th:block th:each="note : ${list}">
+        <div class="title" th:text="${note.title}"></div>
+        <div class="content" th:text="${note.content}"></div>
+        <div class="date" th:text="${note.date}"></div>
+        <div class="status" th:text="${note.status}"></div>
+    </th:block>
+</div>
+</body>
+</html>
