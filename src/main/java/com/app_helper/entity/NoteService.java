@@ -2,7 +2,6 @@ package com.app_helper.entity;
 
 import com.app_helper.repository.NoteRepository;
 import lombok.Data;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,7 +10,7 @@ import java.util.Objects;
 @Data
 @Service
 public class NoteService {
-    private NoteRepository noteRepository;
+    private final NoteRepository noteRepository;
 
     public List<Note> getNoteList() {
         return noteRepository.findAll();

@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <title>List</title>
     <style>
-        /* CSS стили для надписи */
         .page-title {
             text-align: center;
             margin-top: 50px;
             font-size: 24px;
         }
 
-        /* CSS стили для таблицы */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -46,7 +44,6 @@
     <div class="date">Date</div>
     <div class="status">Status</div>
 
-    <!-- Используем Thymeleaf для отображения данных -->
     <th:block th:each="note : ${list}">
         <div class="title" th:text="${note.title}"></div>
         <div class="content" th:text="${note.content}"></div>

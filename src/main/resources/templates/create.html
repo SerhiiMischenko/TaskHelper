@@ -5,6 +5,19 @@
     <title>Create</title>
 </head>
 <body>
-<h1>In process</h1>
+<div class="page-title">
+    <h1>Create Note</h1>
+</div>
+<form action="/note/create" method="POST">
+    <label>Input your notation title</label>
+    <label>
+        <input type="text" name="title">
+    </label>
+    <label>Input content for notation</label>
+    <label>
+        <input type="text" name="content">
+    </label>
+    <button class="custom-button" type="submit">Create</button>
+</form>
 </body>
 </html>
