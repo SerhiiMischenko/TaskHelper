@@ -50,7 +50,7 @@
     <th:block th:each="note : ${list}">
         <div class="title" th:text="${note.title}"></div>
         <div class="content" th:text="${note.content}"></div>
-        <div class="date" th:text="${note.date}"></div>
+        <div class="date" th:text="${note.createDate}"></div>
         <div class="status" th:text="${note.status}"></div>
     </th:block>
 </div>

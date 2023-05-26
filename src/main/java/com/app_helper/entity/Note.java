@@ -18,12 +18,14 @@ public class Note {
     @GeneratedValue
     private Long id;
     private String title;
+    private String content;
     private Date createDate;
     private NoteStatus status;
 
-    public Note(String title, Date createDate, NoteStatus status) {
+    public Note(String title, String content) {
         this.title = title;
-        this.createDate = createDate;
-        this.status = status;
+        this.content = content;
+        this.createDate = new Date();
+        this.status = NoteStatus.NEW;
     }
 }
