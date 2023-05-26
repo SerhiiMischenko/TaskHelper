@@ -2,6 +2,7 @@ package com.app_helper.entity;
 
 import com.app_helper.repository.NoteRepository;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.Objects;
 
 @Data
 @Service
+@RequiredArgsConstructor
 public class NoteService {
     private final NoteRepository noteRepository;
 
